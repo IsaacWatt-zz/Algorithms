@@ -17,10 +17,10 @@ $ npm run test-algos
 
 ### Data Structures
   - Lists 
-    - Stack
-    - Queue
-    - Double Ended Queue
-    - Linked List
+    - [Stack](/data-structures/stack.js)
+    - [Queue](/data-structures/queue.js)
+    - [Double Ended Queue](/data-structures/double-ended-queue.js)
+    - [Linked List](/data-structures/linked-list.js)
     - Hash Table
     - Disjoint Set
   - Geometry
