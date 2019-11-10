@@ -33,8 +33,8 @@ $ npm run test-algos
 
 ### Algorithms  
   - Array 
-    - Kadanes Algorithm **- O(n)**
-    - Maximum sum rectangle **- O(n*m<sup>2</sup>)**
+    - [Kadanes Algorithm](/algorithms/array/kadanes.js) **- O(n)**
+    - [Maximum sum rectangle](/algorithms/array/maximum-sum-rectangle.js) **- O(n*m<sup>2</sup>)**
   - String
     - Manachers Algorithm
   - Linked List
