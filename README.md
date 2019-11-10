@@ -58,7 +58,7 @@ $ npm run test-algos
     - Knights Tour
   - Geometry
     - [Douglas–Peucker](/algorithms/geometry/douglas-peucker.js) **- O(nlogn)**
-    - Minimum Cost Convex Polygon Triangulation **- O(n<sup>3</sup>)**
+    - [Minimum Cost Polygon Triangulation](/algorithms/geometry/minimum-triangulation.js) **- O(n<sup>3</sup>)**
   - Mathematics
 
 ### Software Engineering 
