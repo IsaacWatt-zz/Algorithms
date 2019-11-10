@@ -1,0 +1,26 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "description": "A resource for learning data structures, algorithms, and design patterns, inplemented in `JavaScript`. The first section will set up some of our data structures we will be using. This will include the class set up, and some basic algorithms to demonstrate how the  data structures work. The second section will discuss some popular algorithms, along with their implementations. This section will use what is demonstrated in the first section [Data Structures](/content/data-structures) so I would suggest reading through it first. Finally, I will discuss one of my favorite topics in computer science, [Design Patterns](/content/design-patterns). Learning these can greatly improve the quality, and structure of the code you write! I think its a sweet topic, and when I learned a few of them for the first time it definitely changed the way I designed my programs.",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^3.0.0"
+  },
+  "scripts": {
+    "test-ds": "jasmine-node data-structures/tests;",
+    "test-algos": "jasmine-node algorithms/tests;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaacWatt/Algo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsaacWatt/Algo/issues"
+  },
+  "homepage": "https://github.com/IsaacWatt/Algo#readme"
+}
