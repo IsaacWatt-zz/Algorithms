@@ -48,7 +48,7 @@ $ npm run test-algos
     - [Merge sort](/algorithms/sorting/merge.js) **- O(nlogn)**
     - [Quick sort](/algorithms/sorting/quick.js) **- O(nlogn)**
   - Divide and Conquer
-    - Count Inversions **- O(nlogn)**
+    - [Count Inversions](/algorithms/divide-and-conquer/count-inversions.js) **- O(nlogn)**
   - Dynamic Programming
     - Longest Common Subsequence
     - Shortest Common Supersequence
@@ -57,7 +57,7 @@ $ npm run test-algos
   - Backtracking
     - Knights Tour
   - Geometry
-    - Douglas–Peucker **- O(nlogn)**
+    - [Douglas–Peucker](/algorithms/geometry/douglas-peucker.js) **- O(nlogn)**
     - Minimum Cost Convex Polygon Triangulation **- O(n<sup>3</sup>)**
   - Mathematics
 
