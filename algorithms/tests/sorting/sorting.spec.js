@@ -32,7 +32,7 @@ describe('Basic Tests', function () {
             return Array.from(
                 {length: n},
                 () => { 
-                    return Math.random() * 50 * (Math.random() > 0.5 ? -1 : 1);
+                    return Number((Math.random() * 50 * (Math.random() > 0.5 ? -1 : 1)).toFixed(5));
                 });
         }
 
@@ -44,7 +44,7 @@ describe('Basic Tests', function () {
             JSSort.sort((a, b) => a - b);
 
             sortingAlgorithms.forEach( function (sortingAlgorithm) {
-                //expect( sortingAlgorithm( randomArr )).toEqual(JSSort);
+                expect( sortingAlgorithm( randomArr )).toEqual(JSSort);
             })
         }
     });

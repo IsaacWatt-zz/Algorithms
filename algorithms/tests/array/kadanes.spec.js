@@ -82,7 +82,7 @@ describe('Basic Tests', function () {
             return Array.from(
                 {length: n}, 
                 () => { 
-                    return Math.random() * 50 * (Math.random() > 0.5 ? -1 : 1);
+                    return Number((Math.random() * 50 * (Math.random() > 0.5 ? -1 : 1)).toFixed(4));
                 });
         }
         
