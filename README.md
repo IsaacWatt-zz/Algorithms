@@ -43,10 +43,10 @@ $ npm run test-algos
   - Graph
     - Universal Sink
   - Sorting
-    - Bubble sort **- O(n<sup>2</sup>)**
-    - Insertion sort **- O(n<sup>2</sup>)**
-    - Merge sort **- O(nlogn)**
-    - Quick sort**- O(nlogn)**
+    - [Bubble sort](/algorithms/sorting/bubble.js) **- O(n<sup>2</sup>)**
+    - [Insertion sort](/algorithms/sorting/insertion.js) **- O(n<sup>2</sup>)**
+    - [Merge sort](/algorithms/sorting/merge.js) **- O(nlogn)**
+    - [Quick sort](/algorithms/sorting/quick.js) **- O(nlogn)**
   - Divide and Conquer
     - Count Inversions **- O(nlogn)**
   - Dynamic Programming
@@ -56,7 +56,7 @@ $ npm run test-algos
     - Knights Tour
   - Geometry
     - Douglas–Peucker **- O(nlogn)**
-    - Minimum Cost Polygon Triangulation **- O(n<sup>3</sup>)**
+    - Minimum Cost Convex Polygon Triangulation **- O(n<sup>3</sup>)**
   - Mathematics
 
 ### Software Engineering 
