@@ -24,8 +24,8 @@ $ npm run test-algos
     - Hash Table
     - Disjoint Set
   - Geometry
-    - Point
-    - Line
+    - [Point](/data-structures/point.js)
+    - [Line](/data-structures/line.js)
   - Trees
     - Binary Search Tree
   - Graphs
