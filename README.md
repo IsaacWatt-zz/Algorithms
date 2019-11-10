@@ -52,7 +52,7 @@ $ npm run test-algos
   - Dynamic Programming
     - Longest Common Subsequence
     - Shortest Common Supersequence
-    - Rod Cut **- O(n<sup>2</sup>)**
+    - [Rod Cut](/algorithms/dynamic-programming/rod-cut.js) **- O(n<sup>2</sup>)**
   - Greedy
   - Backtracking
     - Knights Tour
