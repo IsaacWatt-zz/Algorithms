@@ -1,4 +1,4 @@
-# Algorithm Notepad ✏️ 💻
+# Algorithms 📈💻
 Algorithms and Data Structures are fundamental in computer science. Understanding how to design and implement efficient algorithms is an essential skill in becoming a well rounded programmer. This repository contains different data structures / algorithms / programming techniques implemented in `JavaScript`. However, the goal is for this repository is to act as an educational resources and thus I will try and keep the code language agnostic.
 
 If you would like to play with some of the implementations feel free to clone the repository and run: 
@@ -50,6 +50,8 @@ $ npm run test-algos
   - Divide and Conquer
     - Count Inversions **- O(nlogn)**
   - Dynamic Programming
+    - Longest Common Subsequence
+    - Shortest Common Supersequence
     - Rod Cut **- O(n<sup>2</sup>)**
   - Greedy
   - Backtracking
