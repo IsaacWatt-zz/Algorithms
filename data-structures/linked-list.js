@@ -70,6 +70,26 @@ LinkedList.prototype.insertAtTail = function(data) {
 }
 
 /**
+ * finds first node for which callback returns true
+ * @param  {Function} callback function to run on each node
+ * @return {(Node|Null)} A reference to the first Node for which callback returns true or Null
+ *                       if no such node was found
+ *
+ */
+LinkedList.prototype.findByCallback = function(callback) {
+    let curr = this.head; 
+
+    // traverse the linkedlist until first occurrence of a node in which 
+    // callback return true on the node
+    while (curr) {
+        if (callback(curr.data)) return curr;
+        curr = curr.next;
+    }
+
+    return null;
+}
+
+/**
  * retrieve Node at an index of the LinkedList
  * @param  {Number} index The index of the element you wish to retrieve
  * @return {(Node|Error)} The Node at the given index

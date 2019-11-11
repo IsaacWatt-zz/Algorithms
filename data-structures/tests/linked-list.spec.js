@@ -9,7 +9,7 @@ describe('Basic Tests', function () {
     let list1 = new LinkedList(); 
     let list2 = new LinkedList();
 
-    it('inserts, removes, stringifies', function () {
+    it('inserts, removes, stringifies, findByCallback, ...', function () {
       expect(list1.stringify()).toEqual('');
       
       list1.insertAtHead(1); 
@@ -54,6 +54,9 @@ describe('Basic Tests', function () {
       list1.removeIndex(7);
       expect(list1.stringify()).toEqual('0->3->2->1->1->10->11');
 
+      expect((list1.findByCallback(v => v == 1)).data).toEqual(1);
+      expect((list1.findByCallback(v => v == "hello"))).toEqual(null);
+
       expect(function() {list1.removeIndex(7)}).toThrowError;
       expect(function() {list1.removeIndex(-1)}).toThrowError;
       expect(function() {list1.removeIndex(1.5)}).toThrowError;
@@ -63,6 +66,10 @@ describe('Basic Tests', function () {
 
       list1.removeLast(); 
       expect(list1.stringify()).toEqual('3->2->1->1->10');
+      expect((list1.findByCallback(v => v == 3)).data).toEqual(3);
+      expect((list1.findByCallback(v => v == 3)).next.data).toEqual(2);
+      expect((list1.findByCallback(v => v == 3)).next.next.data).toEqual(1);
+      expect((list1.findByCallback(v => true)).data).toEqual(3);
 
       list1.removeFirst(); 
       expect(list1.stringify()).toEqual('2->1->1->10');
@@ -75,6 +82,7 @@ describe('Basic Tests', function () {
       expect(list1.stringify()).toEqual('1');
       list1.removeLast(); 
       expect(list1.stringify()).toEqual('');
+      expect((list1.findByCallback(v => true))).toEqual(null);
 
       expect(function() {list2.removeIndex(0)}).toThrowError;
       expect(function() {list2.removeFirst()}).toThrowError;
