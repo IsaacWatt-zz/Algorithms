@@ -50,7 +50,7 @@ $ npm run test-algos
   - Divide and Conquer
     - [Count Inversions](/algorithms/divide-and-conquer/count-inversions.js) **- O(nlogn)**
   - Dynamic Programming
-    - Longest Common Subsequence
+    - [Longest Common Subsequence](/algorithms/dynamic-programming/longest-common-subsequence.js)
     - Shortest Common Supersequence
     - [Rod Cut](/algorithms/dynamic-programming/rod-cut.js) **- O(n<sup>2</sup>)**
   - Greedy
