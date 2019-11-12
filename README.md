@@ -50,7 +50,8 @@ $ npm run test-algos
     - Tree Diameter
     - Universal Sink
   - Searching
-    - Binary Search
+    - [Binary Search](/algorithms/searching/binary-search.js) **- O(logn)**
+    - Jump Search
     - Interpolation Search
     - Fibonacci Search
     - Exponential Search
@@ -67,7 +68,6 @@ $ npm run test-algos
     - Shortest Common Supersequence
     - [Rod Cut](/algorithms/dynamic-programming/rod-cut.js) **- O(n<sup>2</sup>)**
     - Probability Knight Remains in Chessboard
-  - Greedy
   - Backtracking
     - Knights Tour
     - N-Queens Problem
@@ -75,7 +75,10 @@ $ npm run test-algos
   - Geometry
     - [Douglas–Peucker](/algorithms/geometry/douglas-peucker.js) **- O(nlogn)**
     - [Minimum Cost Polygon Triangulation](/algorithms/geometry/minimum-triangulation.js) **- O(n<sup>3</sup>)**
-    - [Closest Pair of Points]
+    - Closest Pair of Points
+    - Jarvis's Algorithm
+    - Graham's Scan Algorithm
+    - Quickhull Algorithm
   - Mathematics
 
 ### Software Engineering 
