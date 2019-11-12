@@ -21,27 +21,39 @@ $ npm run test-algos
     - [Queue](/data-structures/queue.js)
     - [Double Ended Queue](/data-structures/double-ended-queue.js)
     - [Linked List](/data-structures/linked-list.js)
-    - Hash Table
     - Disjoint Set
+    - Bloom Filter
+  - Hash Table
+    - Double Hashing
+    - Linear Probing
+    - Quadratic Probing
+    - Seperate Chaining
   - Geometry
     - [Point](/data-structures/point.js)
     - [Line](/data-structures/line.js)
   - Trees
     - Binary Search Tree
   - Graphs
-    - Adjacency List
+    - Adjacency List (supports Directed and Undirected)
 
 ### Algorithms  
   - Array 
     - [Kadanes Algorithm](/algorithms/array/kadanes.js) **- O(n)**
     - [Maximum sum rectangle](/algorithms/array/maximum-sum-rectangle.js) **- O(n*m<sup>2</sup>)**
   - String
-    - Manachers Algorithm
-  - Linked List
-    - Merge Sort
-  - Stack 
+    - Booth
+    - Knuth-Morris-Pratt
+    - Manacher
+    - Rabin-Karp
   - Graph
+    - Tree Center(s)
+    - Tree Diameter
     - Universal Sink
+  - Searching
+    - Binary Search
+    - Interpolation Search
+    - Fibonacci Search
+    - Exponential Search
   - Sorting
     - [Bubble sort](/algorithms/sorting/bubble.js) **- O(n<sup>2</sup>)**
     - [Insertion sort](/algorithms/sorting/insertion.js) **- O(n<sup>2</sup>)**
@@ -49,16 +61,21 @@ $ npm run test-algos
     - [Quick sort](/algorithms/sorting/quick.js) **- O(nlogn)**
   - Divide and Conquer
     - [Count Inversions](/algorithms/divide-and-conquer/count-inversions.js) **- O(nlogn)**
+    - Convex Hull
   - Dynamic Programming
     - [Longest Common Subsequence](/algorithms/dynamic-programming/longest-common-subsequence.js) **- O(nm)**
     - Shortest Common Supersequence
     - [Rod Cut](/algorithms/dynamic-programming/rod-cut.js) **- O(n<sup>2</sup>)**
+    - Probability Knight Remains in Chessboard
   - Greedy
   - Backtracking
     - Knights Tour
+    - N-Queens Problem
+    - Power Set
   - Geometry
     - [Douglas–Peucker](/algorithms/geometry/douglas-peucker.js) **- O(nlogn)**
     - [Minimum Cost Polygon Triangulation](/algorithms/geometry/minimum-triangulation.js) **- O(n<sup>3</sup>)**
+    - [Closest Pair of Points]
   - Mathematics
 
 ### Software Engineering 
