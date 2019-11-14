@@ -41,17 +41,17 @@ $ npm run test-algos
     - [Kadanes Algorithm](/algorithms/array/kadanes.js) **- O(n)**
     - [Maximum sum rectangle](/algorithms/array/maximum-sum-rectangle.js) **- O(n*m<sup>2</sup>)**
   - String
-    - Booth
-    - Knuth-Morris-Pratt
-    - Manacher
-    - Rabin-Karp
+    - Booths Algorithm
+    - Knuth-Morris-Pratt Algorithm
+    - Manachers Algorithm
+    - Rabin-Karp Algorithm
   - Graph
     - Tree Center(s)
     - Tree Diameter
     - Universal Sink
   - Searching
     - [Binary Search](/algorithms/searching/binary-search.js) **- O(logn)**
-    - Jump Search
+    - [Jump Search](/algorithms/searching/jump-search.js) **- O(√n)**
     - Interpolation Search
     - Fibonacci Search
     - Exponential Search
