@@ -1,4 +1,39 @@
 /**
+ * Counts the number of inversions in an array
+ * An inversion occurs when a[i] > a[j] and i < j 
+ * @param  {Array} A array of numbers
+ * @return {Number} number of inversions present in A
+ * 
+ * @runtime O(nlogn)
+ * @space O(n)
+ * 
+*/
+var countInversions = function(A) {
+    let n = A.length;
+
+    // intermediate array used in the process of sorting
+    let tmp = new Array(n).fill(0);
+
+    let mergeSortInv = function(A, tmp, start, end) {
+        let count = 0;
+        if (start < end) {
+            let mid = Math.floor((start + end)/2);
+    
+            // count inversions on left and right half
+            count = mergeSortInv(A, tmp, start, mid);
+            count += mergeSortInv(A, tmp, mid + 1, end);
+    
+            // count number of pairs (a_i, a_k) such that a_i is on left half, 
+            // a_k is on right half and a_i > a_k 
+            count += mergeInversions(A, tmp, start, mid + 1, end);
+        }
+        return count;
+    }
+
+    return mergeSortInv(A, tmp, 0, n - 1);
+}
+
+/**
  * Merges two sorted arrays and returns inversion count
  * 
  * @param  {Array} A array of numbers
@@ -10,7 +45,6 @@
  * @runtime O(n)
  * @space O(1)
 */
-
 var mergeInversions = function(A, tmp, start, mid, end) {
 
     let i = start; // index for left sub array
@@ -44,42 +78,6 @@ var mergeInversions = function(A, tmp, start, mid, end) {
         A[i] = tmp[i];  
   
     return count; 
-}
-
-/**
- * Counts the number of inversions in an array
- * An inversion occurs when a[i] > a[j] and i < j 
- * @param  {Array} A array of numbers
- * @return {Number} number of inversions present in A
- * 
- * @runtime O(nlogn)
- * @space O(n)
- * 
-*/
-
-var countInversions = function(A) {
-    let n = A.length;
-
-    // intermediate array used in the process of sorting
-    let tmp = new Array(n).fill(0);
-
-    let mergeSortInv = function(A, tmp, start, end) {
-        let count = 0;
-        if (start < end) {
-            let mid = Math.floor((start + end)/2);
-    
-            // count inversions on left and right half
-            count = mergeSortInv(A, tmp, start, mid);
-            count += mergeSortInv(A, tmp, mid + 1, end);
-    
-            // count number of pairs (a_i, a_k) such that a_i is on left half, 
-            // a_k is on right half and a_i > a_k 
-            count += mergeInversions(A, tmp, start, mid + 1, end);
-        }
-        return count;
-    }
-
-    return mergeSortInv(A, tmp, 0, n - 1);
 }
 
 module.exports = { countInversions };
