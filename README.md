@@ -31,6 +31,7 @@ $ npm run test-algos
   - Geometry
     - [Point](/data-structures/point.js)
     - [Line](/data-structures/line.js)
+    - Polygon
   - Trees
     - Binary Search Tree
   - Graphs
@@ -52,7 +53,7 @@ $ npm run test-algos
   - Searching
     - [Binary Search](/algorithms/searching/binary-search.js) **- O(logn)**
     - [Jump Search](/algorithms/searching/jump-search.js) **- O(√n)**
-    - Interpolation Search
+    - [Interpolation Search](/algorithms/searching/interpolation-search.js) **- O(n)**
     - Fibonacci Search
     - Exponential Search
   - Sorting

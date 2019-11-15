@@ -4,13 +4,15 @@
 
 let Binary = require('../../searching/binary-search');
 let Jump = require('../../searching/jump-search');
+let Interpolation = require('../../searching/interpolation-search');
 
 describe('Basic Tests', function () {
 
     let searchingAlgorithms = 
     [  
         Binary.binarySearch, 
-        Jump.jumpSearch
+        Jump.jumpSearch,
+        Interpolation.interpolationSearch
     ];
 
     it('basic tests', function () {
