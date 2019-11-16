@@ -54,8 +54,8 @@ $ npm run test-algos
     - [Binary Search](/algorithms/searching/binary-search.js) **- O(logn)**
     - [Jump Search](/algorithms/searching/jump-search.js) **- O(√n)**
     - [Interpolation Search](/algorithms/searching/interpolation-search.js) **- O(n)**
+    - [Exponential Search](/algorithms/searching/exponential-search.js) **- O(logn)**
     - Fibonacci Search
-    - Exponential Search
   - Sorting
     - [Bubble sort](/algorithms/sorting/bubble.js) **- O(n<sup>2</sup>)**
     - [Insertion sort](/algorithms/sorting/insertion.js) **- O(n<sup>2</sup>)**

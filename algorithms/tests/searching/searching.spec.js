@@ -5,6 +5,7 @@
 let Binary = require('../../searching/binary-search');
 let Jump = require('../../searching/jump-search');
 let Interpolation = require('../../searching/interpolation-search');
+let Exponential = require('../../searching/exponential-search');
 
 describe('Basic Tests', function () {
 
@@ -12,7 +13,9 @@ describe('Basic Tests', function () {
     [  
         Binary.binarySearch, 
         Jump.jumpSearch,
-        Interpolation.interpolationSearch
+        Interpolation.interpolationSearch,
+        Exponential.exponentialSearch, 
+
     ];
 
     it('basic tests', function () {

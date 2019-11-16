@@ -12,8 +12,7 @@
 */
 let binarySearch = function(elements, target, left = 0, right = elements.length - 1) {
     let n = elements.length;
-    if (left < 0 || right >= n) throw new Error("left and right indices must be within range of elements");
-    
+
     while (left <= right) {
         let mid = Math.floor( left + ((right - left) / 2) );
         if (elements[mid] === target) return mid;
