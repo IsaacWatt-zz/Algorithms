@@ -28,14 +28,15 @@ $ npm run test-algos
     - Linear Probing
     - Quadratic Probing
     - Seperate Chaining
+  - Trees
+    - Binary Search Tree
+    - Heap (min and max)
+  - Graphs
+    - [Adjacency List](/data-structures/adjacency-list.js) (supports Directed and Undirected)
   - Geometry
     - [Point](/data-structures/point.js)
     - [Line](/data-structures/line.js)
     - Polygon
-  - Trees
-    - Binary Search Tree
-  - Graphs
-    - [Adjacency List](/data-structures/adjacency-list.js) (supports Directed and Undirected)
 
 ### Algorithms  
   - Array 
@@ -47,9 +48,15 @@ $ npm run test-algos
     - Manachers Algorithm
     - Rabin-Karp Algorithm
   - Graph
-    - Tree Center(s)
-    - Tree Diameter
-    - Universal Sink
+    - Bipartite graph verification
+    - Articulation points
+    - Dijkstra's shortest path
+    - Floyd Warshall algorithm
+    - Graph diameter
+    - Kruskal's min spanning tree
+    - Prim's min spanning tree
+    - Topological sort
+    - Traveling Salesman
   - Searching
     - [Binary Search](/algorithms/searching/binary-search.js) **- O(logn)**
     - [Jump Search](/algorithms/searching/jump-search.js) **- O(√n)**
