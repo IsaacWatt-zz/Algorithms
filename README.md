@@ -35,7 +35,7 @@ $ npm run test-algos
   - Trees
     - Binary Search Tree
   - Graphs
-    - Adjacency List (supports Directed and Undirected)
+    - [Adjacency List](/data-structures/adjacency-list.js) (supports Directed and Undirected)
 
 ### Algorithms  
   - Array 
@@ -55,7 +55,7 @@ $ npm run test-algos
     - [Jump Search](/algorithms/searching/jump-search.js) **- O(√n)**
     - [Interpolation Search](/algorithms/searching/interpolation-search.js) **- O(n)**
     - [Exponential Search](/algorithms/searching/exponential-search.js) **- O(logn)**
-    - Fibonacci Search
+    - [Fibonacci Search](/algorithms/searching/fibonacci-search.js) **- O(logn)**
   - Sorting
     - [Bubble sort](/algorithms/sorting/bubble.js) **- O(n<sup>2</sup>)**
     - [Insertion sort](/algorithms/sorting/insertion.js) **- O(n<sup>2</sup>)**
