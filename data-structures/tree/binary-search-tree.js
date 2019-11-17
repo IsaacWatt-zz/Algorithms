@@ -20,26 +20,42 @@ class BST {
  * @param  {Number} data The data inside the node to be inserted
  * @return {Undefined}
  * 
- * @runtime O(logn)
- * @space O(1)
  */ 
 BST.prototype.insert = function(data) {
     
     let newNode = new Node(data);
-    let currNode = this.get(data);
+    let currNode = this.getData(data);
     if (currNode != null) currNode = newNode;
-    else throw new Error('Error: data already exists in BST')
+    else throw new Error('Error: data already exists in BST');
 }
 
 /**
  * get data from BST
- * @param  {Number} data The data to be removed
+ * @param  {Node} data The data to be removed
  * @return {Node|Null} A reference to the Node with data
  * 
- * @runtime O(logn)
- * @space O(1)
  */ 
-BST.prototype.get = function(data) {
+BST.prototype.getNode = function(data) {
+    let currNode = this.root; 
+
+    while (currNode != null && currNode.data != data) {
+        if (currNode.data < data) {
+            currNode = currNode.right; 
+        } else if (currNode.data > data) {
+            currNode = currNode.left; 
+        }
+    }
+
+    return currNode; 
+}
+
+/**
+ * remove Node from BST
+ * @param  {Node} data The data to be removed
+ * @return {Node|Null} A reference to the Node with data
+ * 
+ */ 
+BST.prototype.deleteNode = function(data) {
     let currNode = this.root; 
 
     while (currNode != null && currNode.data != data) {
@@ -59,8 +75,6 @@ BST.prototype.get = function(data) {
  * @param {Function} callback callback method to run on every Node 
  * @return {Undefined} 
  * 
- * @runtime O(n)
- * @space O(h) where h is the height of the tree
  */ 
 BST.prototype.inOrder = function(callback) {
     if (this.root == null) return; 
@@ -74,8 +88,6 @@ BST.prototype.inOrder = function(callback) {
  * @param {function(int)} callback callback method to run on every Node 
  * @return {Undefined} 
  * 
- * @runtime O(n)
- * @space O(h) where h is the height of the tree
  */ 
 BST.prototype.preOrder = function(callback) {
     if (this.root == null) return; 
@@ -89,8 +101,6 @@ BST.prototype.preOrder = function(callback) {
  * @param {function(int)} callback callback method to run on every Node 
  * @return {Undefined} 
  * 
- * @runtime O(n)
- * @space O(h) where h is the height of the tree
  */ 
 BST.prototype.postOrder = function(callback) {
     if (this.root == null) return; 
@@ -103,7 +113,6 @@ BST.prototype.postOrder = function(callback) {
  * delete this BST
  * @return {Undefined}
  * 
- * @runtime O(1)
  * 
  */
 BST.prototype.deleteBST = function() {

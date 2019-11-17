@@ -7,10 +7,12 @@
 class Queue {
     /**
      * Construct an empty Queue
+     * @param {Function} compareCallback a callback specifying how to compare items in the queue
      * @return {Queue} returns a reference to the created Queue
      */
-    constructor(){
+    constructor(compareCallback = undefined){
         this.items = [];
+        this.compareCallback = compareCallback ? compareCallback : (item1, item2) => item1 === item2;
     }
 }
 

@@ -8,10 +8,12 @@ let Node = require('./node');
 class LinkedList {
     /**
      * Construct an empty Linked List
+     * @param {Function} compareCallback a callback specifying how to compare Nodes in the linked list
      * @return {LinkedList} returns a reference to the created LinkedList
      */
-    constructor() {
+    constructor(compareCallback = undefined) {
         this.head = null;
+        this.compareCallback = compareCallback ? compareCallback : (data1, data2) => data1 === data2;
     }
 }
 
@@ -70,23 +72,33 @@ LinkedList.prototype.insertAtTail = function(data) {
 }
 
 /**
- * finds first node for which callback returns true
- * @param  {Function} callback function to run on each node
- * @return {(Node|Null)} A reference to the first Node for which callback returns true or Null
- *                       if no such node was found
+ * finds first node for which compareCallback returns true
+ * @param  {Any} data data to find in linked list
+ * @return {(Node|Null)} A reference to the first Node n for which compareCallback(n.data, data) 
+ *                       returns true or Null if no such node was found
  *
  */
-LinkedList.prototype.findByCallback = function(callback) {
+LinkedList.prototype.findData = function(data) {
     let curr = this.head; 
 
     // traverse the linkedlist until first occurrence of a node in which 
     // callback return true on the node
     while (curr) {
-        if (callback(curr.data)) return curr;
+        if (this.compareCallback(curr.data, data)) return curr;
         curr = curr.next;
     }
 
     return null;
+}
+
+/**
+ * resets compareCallback to default, or sets to callback parameter
+ * @param  {Function} compareCallback callback describing how to compare data inside two Nodes 
+ * @return {Undefined} 
+ *
+ */
+LinkedList.prototype.setCompareCallback = function(compareCallback = undefined) {
+    this.compareCallback = compareCallback ? compareCallback : (data1, data2) => data1 === data2;
 }
 
 /**
@@ -144,7 +156,7 @@ LinkedList.prototype.insertIndex = function(data, index) {
 
 /**
  * delete first Node in Linked List
- * @return {(Undefined|Error)}
+ * @return {(Node|Error)}
  */
 LinkedList.prototype.removeFirst = function() {
 
@@ -152,7 +164,10 @@ LinkedList.prototype.removeFirst = function() {
         throw new Error('Linked List is already empty!');
     }
 
+    let first = this.head;
     this.head = this.head.next;
+
+    return first;
 }
 
 /**
