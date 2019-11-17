@@ -1,4 +1,4 @@
-let Point = require("../../data-structures/point");
+let Point = require("../../data-structures/geometry/point");
 
 /**
  * determines the length of the perimeter of a triangle 

@@ -1,4 +1,4 @@
-let Line = require("../../data-structures/line");
+let Line = require("../../data-structures/geometry/line");
 
 /**
  * Decimates a polyline into a "similar" polyline with less points

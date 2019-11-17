@@ -2,7 +2,7 @@
  * Point Jasmine tests
  */
 
-let Point = require('../point');
+let Point = require('../geometry/point');
 
 describe('Basic Tests', function () {
 

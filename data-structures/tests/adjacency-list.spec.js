@@ -2,7 +2,7 @@
  * Adjacency List Jasmine tests
  */
 
-let Graph = require('../adjacency-list');
+let Graph = require('../graph/adjacency-list');
 
 describe('Basic Tests', function () {
 

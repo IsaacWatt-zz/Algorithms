@@ -2,7 +2,7 @@
  * Queue Jasmine tests
  */
 
-let DoubleEndedQueue = require('../double-ended-queue');
+let DoubleEndedQueue = require('../list/double-ended-queue');
 
 describe('Basic Tests', function () {
 

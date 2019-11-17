@@ -2,7 +2,7 @@
  * Linked List Jasmine tests
  */
 
-let LinkedList = require('../linked-list');
+let LinkedList = require('../list/linked-list');
 
 describe('Basic Tests', function () {
 

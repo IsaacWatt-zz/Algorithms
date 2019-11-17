@@ -31,6 +31,7 @@ $ npm run test-algos
   - Trees
     - Binary Search Tree
     - Heap (min and max)
+    - Fibonacci Heap
   - Graphs
     - [Adjacency List](/data-structures/adjacency-list.js) (supports Directed and Undirected)
   - Geometry
@@ -43,7 +44,10 @@ $ npm run test-algos
     - [Kadanes Algorithm](/algorithms/array/kadanes.js) **- O(n)**
     - [Maximum sum rectangle](/algorithms/array/maximum-sum-rectangle.js) **- O(n*m<sup>2</sup>)**
   - String
+    - [Hamming Distance](/algorithms/srting/hamming-distance.js) **- O(n)**
+    - Levenshtein Distance
     - Booths Algorithm
+    - Z Algorithm 
     - Knuth-Morris-Pratt Algorithm
     - Manachers Algorithm
     - Rabin-Karp Algorithm

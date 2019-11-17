@@ -3,8 +3,8 @@
  */
 
 let Douglas = require('../../geometry/douglas-peucker');
-let Point = require('../../../data-structures/point');
-let Line = require('../../../data-structures/line');
+let Point = require('../../../data-structures/geometry/point');
+let Line = require('../../../data-structures/geometry/line');
 
 describe('Basic Tests', function () {
     let douglas = Douglas.douglasPeucker;

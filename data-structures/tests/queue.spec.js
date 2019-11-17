@@ -2,7 +2,7 @@
  * Queue Jasmine tests
  */
 
-let Queue = require('../queue');
+let Queue = require('../list/queue');
 
 describe('Basic Tests', function () {
 

@@ -2,8 +2,8 @@
  * Line Jasmine tests
  */
 
-let Point = require('../point');
-let Line = require('../line');
+let Point = require('../geometry/point');
+let Line = require('../geometry/line');
 
 describe('Basic Tests', function () {
 

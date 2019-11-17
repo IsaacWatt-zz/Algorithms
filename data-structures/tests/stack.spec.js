@@ -2,7 +2,7 @@
  * Stack Jasmine tests
  */
 
-let Stack = require('../stack');
+let Stack = require('../list/stack');
 
 describe('Basic Tests', function () {
 
