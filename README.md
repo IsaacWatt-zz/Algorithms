@@ -17,10 +17,10 @@ $ npm run test-algos
 
 ### Data Structures
   - Lists 
-    - [Stack](/data-structures/stack.js)
-    - [Queue](/data-structures/queue.js)
-    - [Double Ended Queue](/data-structures/double-ended-queue.js)
-    - [Linked List](/data-structures/linked-list.js)
+    - [Stack](/data-structures/list/stack.js)
+    - [Queue](/data-structures/list/queue.js)
+    - [Double Ended Queue](/data-structures/list/double-ended-queue.js)
+    - [Linked List](/data-structures/list/linked-list.js)
     - Disjoint Set
     - Bloom Filter
   - Hash Table
@@ -33,10 +33,10 @@ $ npm run test-algos
     - Heap (min and max)
     - Fibonacci Heap
   - Graphs
-    - [Adjacency List](/data-structures/adjacency-list.js) (supports Directed and Undirected)
+    - [Adjacency List](/data-structures/graph/adjacency-list.js) (supports Directed and Undirected)
   - Geometry
-    - [Point](/data-structures/point.js)
-    - [Line](/data-structures/line.js)
+    - [Point](/data-structures/geometry/point.js)
+    - [Line](/data-structures/geometry/line.js)
     - Polygon
 
 ### Algorithms  
