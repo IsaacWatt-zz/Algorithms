@@ -29,6 +29,24 @@ Graph.prototype.addVertex = function(v) {
 }
 
 /**
+ * removes a vertex from a Graph
+ * @param {Any} vertex to be removed from graph
+ * @return {Undefined}
+ * 
+ */
+Graph.prototype.removeVertex = function(v) {
+
+    // traverse graph removing all incoming edges to v
+    for (let [vertex, adjList] of this.adj) {
+        adjList = adjList.filter(e => e !== v);
+        this.adj.set(vertex, adjList); 
+    }
+
+    // delete vertex v from adjacency list
+    this.adj.delete(v); 
+}
+
+/**
  * adds an edge from v to w in a Graph
  * @param {Verex} v vertex in which edge is outgoing from
  * @param {Verex} w vertex in which edge incoming to
@@ -45,6 +63,31 @@ Graph.prototype.addEdge = function(v, w) {
 
     // if the graph is undirected we do the same for w
     if (!this.isDirected) this.adj.get(w).push(v); 
+}
+
+/**
+ * removed edge from v to w in a Graph
+ * @param {Verex} v vertex in which edge is outgoing from
+ * @param {Verex} w vertex in which edge incoming to
+ * @return {Undefined}
+ * 
+ */
+Graph.prototype.removeEdge = function(v, w) {
+
+    if (!this.adj.has(v) || !this.adj.has(v))
+        throw new Error("Invalid vertices passed into addEdge");
+ 
+    // get list for v and remove w from it
+    let vList = this.adj.get(v);
+    vList = vList.filter(e => e !== w);
+    this.adj.set(v, vList); 
+
+    // if the graph is undirected we do the same for w
+    if (!this.isDirected) {
+        let wList = this.adj.get(w);
+        wList = wList.filter(e => e !== v);
+        this.adj.set(w, wList); 
+    }
 }
 
 /**
@@ -86,7 +129,7 @@ Graph.prototype.bfs = function(start, callback) {
     BFSUtility(start, this.adj);
 
     // check for disconnected components
-    for (const [vertex, adjList] of this.adj) {
+    for (const vertex of this.adj.keys()) {
         if (!visited.has(vertex)) {
             BFSUtility(vertex, this.adj);
         }
@@ -124,7 +167,7 @@ Graph.prototype.dfs  = function(start, callback) {
     dfsUtility(start, this.adj);
      
     // check for disconnected components
-    for (const [vertex, adjList] of this.adj)
+    for (const vertex of this.adj.keys())
         if (!visited.has(vertex))
             dfsUtility(vertex, this.adj);
 }

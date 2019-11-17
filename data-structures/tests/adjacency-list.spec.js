@@ -49,6 +49,17 @@ describe('Basic Tests', function () {
         undirected2.dfs(o1, function (v) { str += v.name; });
         expect(str).toEqual('abc');
 
+        // test removing vertex, edge
+        undirectedGraph.removeVertex(1);
+        expect(undirectedGraph.stringify(v => v)).toEqual('2 ->\n3 ->\n4 ->\n5 ->\n');
+        
+        undirectedGraph.addEdge(2, 3);
+        expect(undirectedGraph.stringify(v => v)).toEqual('2 -> 3\n3 -> 2\n4 ->\n5 ->\n');
+        undirectedGraph.removeEdge(2, 3);
+        expect(undirectedGraph.stringify(v => v)).toEqual('2 ->\n3 ->\n4 ->\n5 ->\n');
+        undirectedGraph.removeVertex(5);
+        expect(undirectedGraph.stringify(v => v)).toEqual('2 ->\n3 ->\n4 ->\n');
+
     });
 
     it('directed primitive, object', function () {
@@ -64,7 +75,7 @@ describe('Basic Tests', function () {
         expect(directedGraph.stringify(v => v)).toEqual('1 ->\n2 ->\n3 ->\n4 ->\n5 ->\n');
         directedGraph.addEdge(1,2);
         // directedGraph:
-        // 1-2 3 4 5
+        // 1->2 3 4 5
 
         expect(directedGraph.stringify(v => v)).toEqual('1 -> 2\n2 ->\n3 ->\n4 ->\n5 ->\n');
 
@@ -75,6 +86,9 @@ describe('Basic Tests', function () {
         str = "";
         directedGraph.dfs(1, function (v) { str += v; });
         expect(str).toEqual('12345');
+
+        directedGraph.removeEdge(1, 2)
+        expect(directedGraph.stringify(v => v)).toEqual('1 ->\n2 ->\n3 ->\n4 ->\n5 ->\n');
 
         let directed2 = new Graph(true);
         let a = { "name": "a" };
@@ -120,7 +134,7 @@ describe('Basic Tests', function () {
         directed2.addEdge(a, d);
         // directed2:
         // c<-d<-a<->b
-        
+
         str = "";
         directed2.bfs(a, function (v) { str += v.name; });
         expect(str).toEqual('abdc');
