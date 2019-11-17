@@ -44,7 +44,7 @@ $ npm run test-algos
     - [Kadanes Algorithm](/algorithms/array/kadanes.js) **- O(n)**
     - [Maximum sum rectangle](/algorithms/array/maximum-sum-rectangle.js) **- O(n*m<sup>2</sup>)**
   - String
-    - [Hamming Distance](/algorithms/srting/hamming-distance.js) **- O(n)**
+    - [Hamming Distance](/algorithms/string/hamming-distance.js) **- O(n)**
     - Levenshtein Distance
     - Booths Algorithm
     - Z Algorithm 
