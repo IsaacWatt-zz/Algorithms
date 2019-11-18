@@ -21,7 +21,7 @@ $ npm run test-algos
     - [Queue](/data-structures/list/queue.js)
     - [Double Ended Queue](/data-structures/list/double-ended-queue.js)
     - [Linked List](/data-structures/list/linked-list.js)
-    - Disjoint Set
+    - [Disjoint Set](/data-structures/list/disjoint-set.js)
     - Bloom Filter
   - Hash Table
     - Double Hashing
