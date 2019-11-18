@@ -1,7 +1,6 @@
 /**
- * Disjoint Set Node Data Structure and basic operations
+ * Disjoint Set implementation with basic data structure operations
  */
-
 "use strict";
 
 class DisjointSet {
