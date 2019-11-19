@@ -8,7 +8,7 @@
  * @space O(n)
  * 
 */
-var countInversions = function(A) {
+let countInversions = function(A) {
     let n = A.length;
 
     // intermediate array used in the process of sorting
@@ -45,7 +45,7 @@ var countInversions = function(A) {
  * @runtime O(n)
  * @space O(1)
 */
-var mergeInversions = function(A, tmp, start, mid, end) {
+let mergeInversions = function(A, tmp, start, mid, end) {
 
     let i = start; // index for left sub array
     let j = mid; // index for right sub array
