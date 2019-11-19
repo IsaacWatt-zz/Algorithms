@@ -1,23 +1,18 @@
 /**
  * Adjacency List data structure with basic data structure operations
  */
-
 "use strict";
-let Node = require('./graphNode');
-
 
 class Graph {
-    
     /**
      * Construct a Graph
      * @param {Function} compareCallback a callback specifying how to compare items in the adjacency list
-     * @return {Node} returns a reference to the created Node
+     * @return {Graph} returns a reference to the created Graph
      */
     constructor(isDirected = false, compareCallback = undefined)  {
         this.adj = new Map();
         this.numVerticies = 0;
         this.isDirected = isDirected;
-
         this.compareCallback = compareCallback ? compareCallback : (item1, item2) => item1 === item2;
     }
 }
@@ -32,10 +27,10 @@ Graph.prototype.addVertex = function(v) {
 
     // check if v is already in the graph
     for (let vertex of this.adj.keys()) {
-        if (this.compareCallback(v, vertex.data)) throw new Error("v already exists in graph")
+        if (this.compareCallback(v, vertex)) throw new Error("v already exists in graph")
     }
 
-    this.adj.set(new Node(v), []); 
+    this.adj.set(v, []); 
     ++this.numVerticies;
 }
 
@@ -49,7 +44,7 @@ Graph.prototype.getVertex = function(v) {
 
     // check if v is already in the graph
     for (let vertex of this.adj.keys()) {
-        if (this.compareCallback(v, vertex.data)) return vertex;
+        if (this.compareCallback(v, vertex)) return vertex;
     }
 
     return null;
@@ -65,7 +60,7 @@ Graph.prototype.getAdjList = function(v) {
 
     // check if v is already in the graph
     for (let [vertex, adjList] of this.adj) {
-        if (this.compareCallback(v, vertex.data)) return adjList;
+        if (this.compareCallback(v, vertex)) return adjList;
     }
 
     return null;
@@ -83,10 +78,10 @@ Graph.prototype.removeVertex = function(v) {
     for (let [vertex, adjList] of this.adj) {
         // remove vertices that are compareCallback equal to v
 
-        adjList = adjList.filter(e => !this.compareCallback(e.data, v));
+        adjList = adjList.filter(e => !this.compareCallback(e.node, v));
         this.adj.set(vertex, adjList); 
         // if the current vertex is compareCallback equal to v, remove it
-        if (this.compareCallback(v, vertex.data)) this.adj.delete(vertex); 
+        if (this.compareCallback(v, vertex)) this.adj.delete(vertex); 
     }
 }
 
@@ -94,16 +89,20 @@ Graph.prototype.removeVertex = function(v) {
  * adds an edge from Node with data v to Node with data w in a Graph
  * @param {Any} v vertex data in which edge is outgoing from
  * @param {Any} w vertex data in which edge incoming to
+ * @param {Number} weight the weight of edge from v to w
  * @return {Undefined}
  * 
  */
-Graph.prototype.addEdge = function(v, w) {
+Graph.prototype.addEdge = function(v, w, weight = 0) {
 
     let addEdgeDirected = function(v, w, adj) {
         for (let [vertex, adjList] of this.adj) {
-            if (this.compareCallback(v, vertex.data)) {
+            if (this.compareCallback(v, vertex)) {
                 let wNode = this.getVertex(w);
-                adjList.push(wNode); 
+                adjList.push({
+                    node: wNode,
+                    weight: weight
+                }); 
                 this.adj.set(vertex, adjList);
             }
         }
@@ -125,9 +124,9 @@ Graph.prototype.removeEdge = function(v, w) {
     
     let removeEdgeDirected = function(v, w) {
         for (let [vertex, adjList] of this.adj) {
-            if (this.compareCallback(v, vertex.data)) {
+            if (this.compareCallback(v, vertex)) {
                 let wNode = this.getVertex(w);
-                adjList = adjList.filter(e => e === w);
+                adjList = adjList.filter(e => e.node !== wNode);
                 this.adj.set(vertex, adjList);
             }
         }
@@ -166,10 +165,10 @@ Graph.prototype.bfs = function(start, callback) {
             // queue if it is not processed yet 
             
             for (const neighbour of currAdjList) { 
-                if (!visited.has(neighbour.data)) { 
-                    visited.set(neighbour.data, true);
-                    q.enqueue(neighbour.data); 
-                } 
+                if (!visited.has(neighbour.node)) { 
+                    visited.set(neighbour.node, true);
+                    q.enqueue(neighbour.node); 
+                }
             } 
         }
     }
@@ -181,8 +180,8 @@ Graph.prototype.bfs = function(start, callback) {
 
     // check for disconnected components
     for (const vertex of this.adj.keys()) {
-        if (!visited.has(vertex.data)) {
-            BFSUtility(vertex.data);
+        if (!visited.has(vertex)) {
+            BFSUtility(vertex);
         }
     }
     
@@ -208,8 +207,8 @@ Graph.prototype.dfs = function(start, callback) {
         // recurse on each non visited neighbour of curr
         let neighbours = this.getAdjList(curr);  
         for (let neighbour of neighbours) {
-            if (!visited.has(neighbour.data)) {
-                dfsUtility(neighbour.data);
+            if (!visited.has(neighbour.node)) {
+                dfsUtility(neighbour.node);
             }
         }
     }
@@ -220,8 +219,8 @@ Graph.prototype.dfs = function(start, callback) {
      
     // check for disconnected components
     for (const vertex of this.adj.keys())
-        if (!visited.has(vertex.data))
-            dfsUtility(vertex.data);
+        if (!visited.has(vertex))
+            dfsUtility(vertex);
 }
 
 /**
@@ -233,19 +232,17 @@ Graph.prototype.dfs = function(start, callback) {
  * @runtime O(|V| + |E|)
  * @space O(|V| + |E|)
  */
-Graph.prototype.stringify = function(callback) {
+Graph.prototype.stringify = function(callback = (item) => item) {
     let graphAsString = "";
     let vertices = this.adj.keys(); 
 
     for (let vertex of vertices) {
-        let outEdges = this.adj.get(vertex); 
-        let currStr = "";
-        
+        let outEdges = this.adj.get(vertex);     
+        graphAsString += `${callback(vertex)}\n`;
         for (let neighbour of outEdges) 
-            currStr += " " + callback(neighbour.data);
-
-        graphAsString += `${callback(vertex.data)} ->${currStr}\n`;
+            graphAsString += `-(${neighbour.weight})->` + callback(neighbour.node) + "\n";
     }
+
     return graphAsString;
 }
 
