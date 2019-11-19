@@ -33,7 +33,7 @@ $ npm run test-algos
     - Heap (min and max)
     - Fibonacci Heap
   - Graphs
-    - [Adjacency List](/data-structures/graph/adjacency-list.js) (supports Directed and Undirected)
+    - [Adjacency List](/data-structures/graph/adjacency-list.js) (Directed and Undirected)
   - Geometry
     - [Point](/data-structures/geometry/point.js)
     - [Line](/data-structures/geometry/line.js)
@@ -52,12 +52,13 @@ $ npm run test-algos
     - Manachers Algorithm
     - Rabin-Karp Algorithm
   - Graph
+    - [Kruskal's Algorithm](/algorithms/graph/kruskals.js) **- O(|E|log|E|)**
     - Bipartite graph verification
     - Articulation points
     - Dijkstra's shortest path
+    - A* Search
     - Floyd Warshall algorithm
     - Graph diameter
-    - Kruskal's min spanning tree
     - Prim's min spanning tree
     - Topological sort
     - Traveling Salesman
