@@ -6,6 +6,7 @@ let Bubble = require('../../sorting/bubble');
 let Insertion = require('../../sorting/insertion');
 let Merge = require('../../sorting/merge');
 let Quick = require('../../sorting/quick');
+let Heap = require('../../sorting/heap');
 
 describe('Basic Tests', function () {
 
@@ -14,7 +15,8 @@ describe('Basic Tests', function () {
         Bubble.bubbleSort, 
         Insertion.insertionSort, 
         Merge.mergeSort,
-        Quick.quickSort
+        Quick.quickSort,
+        Heap.heapSort
     ];
 
     it('basic tests', function () {
@@ -22,6 +24,7 @@ describe('Basic Tests', function () {
             expect( sortingAlgorithm( [] )).toEqual([]);
             expect( sortingAlgorithm( [1] )).toEqual([1]);
             expect( sortingAlgorithm( [1,0] )).toEqual([0,1]);
+            expect( sortingAlgorithm( [1,0,2,3,1,7,8] )).toEqual([0,1,1,2,3,7,8]);
         })
     });
 

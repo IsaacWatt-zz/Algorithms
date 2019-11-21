@@ -23,21 +23,25 @@ $ npm run test-algos
     - [Linked List](/data-structures/list/linked-list.js)
     - [Disjoint Set](/data-structures/list/disjoint-set.js)
     - Bloom Filter
+  - Priority Queue
+    - [Binary Heap](/data-structures/priority-queue/binary-heap.js) (Min and Max)
+    - D-Heap (Min and Max)
+    - Fibonacci Heap
+  - Tree
+    - Binary Search Tree
+    - AVL Tree
+    - Red-Black Tree
+    - Fenwick Tree
   - Hash Table
     - Double Hashing
     - Linear Probing
     - Quadratic Probing
     - Seperate Chaining
-  - Trees
-    - Binary Search Tree
-    - Heap (min and max)
-    - Fibonacci Heap
   - Graphs
     - [Adjacency List](/data-structures/graph/adjacency-list.js) (Directed and Undirected)
   - Geometry
     - [Point](/data-structures/geometry/point.js)
     - [Line](/data-structures/geometry/line.js)
-    - Polygon
 
 ### Algorithms  
   - Array 
@@ -53,13 +57,13 @@ $ npm run test-algos
     - Rabin-Karp Algorithm
   - Graph
     - [Kruskal's Algorithm](/algorithms/graph/kruskals.js) **- O(|E|log|E|)**
+    - Prims Algorithm
     - Bipartite graph verification
     - Articulation points
     - Dijkstra's shortest path
     - A* Search
     - Floyd Warshall algorithm
     - Graph diameter
-    - Prim's min spanning tree
     - Topological sort
     - Traveling Salesman
   - Searching
@@ -68,10 +72,11 @@ $ npm run test-algos
     - [Interpolation Search](/algorithms/searching/interpolation-search.js) **- O(n)**
     - [Exponential Search](/algorithms/searching/exponential-search.js) **- O(logn)**
   - Sorting
-    - [Bubble sort](/algorithms/sorting/bubble.js) **- O(n<sup>2</sup>)**
-    - [Insertion sort](/algorithms/sorting/insertion.js) **- O(n<sup>2</sup>)**
     - [Merge sort](/algorithms/sorting/merge.js) **- O(nlogn)**
     - [Quick sort](/algorithms/sorting/quick.js) **- O(nlogn)**
+    - [Heap sort](/algorithms/sorting/heap.js) **- O(nlogn)**
+    - [Bubble sort](/algorithms/sorting/bubble.js) **- O(n<sup>2</sup>)**
+    - [Insertion sort](/algorithms/sorting/insertion.js) **- O(n<sup>2</sup>)**
   - Divide and Conquer
     - [Count Inversions](/algorithms/divide-and-conquer/count-inversions.js) **- O(nlogn)**
     - Convex Hull
