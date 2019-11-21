@@ -6,7 +6,7 @@ let Line = require("../../data-structures/geometry/line");
  * @param  {Number} epsilon is a threshold such that the new polyline has hausdorff distance <= epsilon from the 
  *                  original polyline
  * @return {Array} sub array of input points representing a new polyline such that 
- *                 its hausdorff distance from the origin is <= epsilon and its length is minimum
+ *                 its hausdorff distance from the origin is <= epsilon
  * @runtime O(n^2)
  * @space O(n) stack space
 */
