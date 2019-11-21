@@ -7,7 +7,7 @@ let Line = require("../../data-structures/geometry/line");
  *                  original polyline
  * @return {Array} sub array of input points representing a new polyline such that 
  *                 its hausdorff distance from the origin is <= epsilon and its length is minimum
- * @runtime O(nlogn)
+ * @runtime O(n^2)
  * @space O(n) stack space
 */
 let douglasPeucker = function(points, epsilon) {

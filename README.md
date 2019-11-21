@@ -90,7 +90,7 @@ $ npm run test-algos
     - N-Queens Problem
     - Power Set
   - Geometry
-    - [Douglas–Peucker](/algorithms/geometry/douglas-peucker.js) **- O(nlogn)**
+    - [Douglas–Peucker](/algorithms/geometry/douglas-peucker.js) **- O(n<sup>2</sup>)**
     - [Minimum Cost Polygon Triangulation](/algorithms/geometry/minimum-triangulation.js) **- O(n<sup>3</sup>)**
     - Closest Pair of Points
     - Jarvis's Algorithm
